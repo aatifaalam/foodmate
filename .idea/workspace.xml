@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="f1e66142-340b-46a2-84dc-fd8f7e82bef5" name="Changes" comment="" />
+=======
+    <list default="true" id="f1e66142-340b-46a2-84dc-fd8f7e82bef5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/foodmate-backend/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodmate-backend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodmate-backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodmate-backend/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodmate-backend/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodmate-backend/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodmate-backend/src/main/java/com/foodmate/backend/FoodmateBackendApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodmate-backend/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/foodmate-backend/src/test/java/com/foodmate/backend/FoodmateBackendApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodmate-backend/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/foodmate-frontend/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/foodmate-frontend/test.txt" afterDir="false" />
+    </list>
+>>>>>>> 19db3e45ab456fc07e7c0ef4653148a96451ccf2
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,7 +48,11 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "git-widget-placeholder": "main",
+=======
+    "git-widget-placeholder": "feature-1",
+>>>>>>> 19db3e45ab456fc07e7c0ef4653148a96451ccf2
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/aatif/foodmate"
   }
