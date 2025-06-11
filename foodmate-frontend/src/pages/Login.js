@@ -1,51 +1,104 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import { Link } from 'react-router-dom';
+import './Login.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
-    const navigate = useNavigate();
+    const [rememberMe, setRememberMe] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-            const response = await axios.post('/api/auth/login', { email, password });
-            localStorage.setItem('token', response.data.token);
-            navigate('/donate');
-        } catch (err) {
-            setError('Invalid email or password');
-        }
+        // Your login logic here
     };
 
     return (
-        <div className="flex justify-center items-center h-screen">
-            <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-80">
-                <h2 className="text-2xl mb-4">Login</h2>
-                {error && <p className="text-red-500">{error}</p>}
-                <div className="mb-4">
-                    <label className="block mb-1">Email</label>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="w-full border border-gray-300 p-2 rounded"
-                        required
-                    />
+        <div className="login-page">
+            {/* Header */}
+            <header className="login-header">
+                <div className="header-content">
+                    <div className="logo-section">
+                        <Link to="/" className="logo">
+                            <img src="/assets/logo.png" alt="FoodMate" className="logo-image" />
+                            <span className="logo-text">Volunteer Hub</span>
+                        </Link>
+                    </div>
+                    <div className="header-links">
+                        <Link to="/" className="website-link">FoodMate Website</Link>
+                        <Link to="/login" className="login-link">Login</Link>
+                    </div>
                 </div>
-                <div className="mb-4">
-                    <label className="block mb-1">Password</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        className="w-full border border-gray-300 p-2 rounded"
-                        required
-                    />
+            </header>
+
+            {/* Main Content */}
+            <main className="login-container">
+                <div className="login-box">
+                    <h1>Login</h1>
+                    <p className="welcome-text">
+                        Welcome! Please use the same login details that you use for the app
+                    </p>
+
+                    <form onSubmit={handleSubmit}>
+                        <div className="form-group">
+                            <label htmlFor="email">
+                                <span className="required">*</span>Email
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="password">
+                                <span className="required">*</span>Password
+                            </label>
+                            <input
+                                type="password"
+                                id="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
+                            />
+                        </div>
+
+                        <div className="remember-me">
+                            <label className="checkbox-container">
+                                <input
+                                    type="checkbox"
+                                    checked={rememberMe}
+                                    onChange={(e) => setRememberMe(e.target.checked)}
+                                />
+                                <span className="checkmark"></span>
+                                Remember me on this device for 30 days
+                            </label>
+                        </div>
+
+                        <Link to="/forgot-password" className="forgot-password">
+                            Forgot password?
+                        </Link>
+
+                        <button type="submit" className="login-button">
+                            Login
+                        </button>
+
+                        <Link to="/magic-link" className="magic-link">
+                            Or login via magic link
+                        </Link>
+                    </form>
                 </div>
-                <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">Login</button>
-            </form>
+
+                {/* FAQ Button */}
+                <div className="faq-button">
+                    <button>
+                        <span className="faq-icon">❓</span>
+                        FAQs
+                    </button>
+                </div>
+            </main>
         </div>
     );
 };

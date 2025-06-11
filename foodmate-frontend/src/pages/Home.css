@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+.home-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+  background-color: #fff8f0;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Main Navigation */
+.main-nav {
+  background: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.main-nav .nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d1160;
+  text-decoration: none;
+  background: linear-gradient(45deg, #2d1160, #ff4d7d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 0.2s;
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #2d1160;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+  margin-left: 32px;
+}
+
+.nav-button {
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.nav-button:not(.secondary) {
+  background-color: #2d1160;
+  color: white;
+}
+
+.nav-button.secondary {
+  background-color: white;
+  color: #2d1160;
+  border: 2px solid #2d1160;
+}
+
+.nav-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Rest of your existing CSS */
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.language-select {
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.promo-badge {
+  background-color: #ff4d7d;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.promo-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.promo-link {
+  color: #333;
+  text-decoration: underline;
+  margin-left: 4px;
+}
+
+.volunteer-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.content-left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.main-heading {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.heading-primary {
+  color: #2d1160;
+}
+
+.heading-secondary {
+  color: #ff4d7d;
+}
+
+.main-description {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+
+.get-app-button {
+  display: inline-block;
+  background-color: #2d1160;
+  color: white;
+  padding: 16px 32px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.get-app-button:hover {
+  background-color: #3d1880;
+}
+
+.content-right {
+  flex: 1;
+  position: relative;
+}
+
+.phone-mockup-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.phone-mockup {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.gradient-background {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  bottom: -100px;
+  left: -100px;
+  background: linear-gradient(135deg, #ffd700 0%, #ff4d7d 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 20px;
+  }
+  
+  .nav-buttons {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav .nav-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nav-buttons {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .main-heading {
+    font-size: 48px;
+  }
+
+  .main-description {
+    margin: 0 auto 32px;
+  }
+
+  .nav-content {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .phone-mockup-container {
+    margin-top: 40px;
+  }
+} 
