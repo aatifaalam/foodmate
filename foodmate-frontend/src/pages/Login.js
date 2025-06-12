@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Login.css';
+import FaqModal from '../components/FaqModal';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [rememberMe, setRememberMe] = useState(false);
+    const [isFaqOpen, setIsFaqOpen] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -92,12 +94,16 @@ const Login = () => {
                 </div>
 
                 {/* FAQ Button */}
-                <div className="faq-button">
-                    <button>
-                        <span className="faq-icon">❓</span>
-                        FAQs
-                    </button>
-                </div>
+                <button
+                    onClick={() => setIsFaqOpen(true)}
+                    className="fixed bottom-8 right-8 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:transform hover:-translate-y-1"
+                >
+                    <span className="text-xl">❓</span>
+                    <span className="font-medium">FAQs</span>
+                </button>
+
+                {/* FAQ Modal */}
+                <FaqModal isOpen={isFaqOpen} onClose={() => setIsFaqOpen(false)} />
             </main>
         </div>
     );

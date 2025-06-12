@@ -16,7 +16,7 @@ function Home() {
           <div className="nav-center">
             <span className="promo-badge">NEW</span>
             <span className="promo-text">
-              Want to win a £25 Iceland voucher? Claim a Lucky Dip bag 🛍️ by 13th June to enter our prize draw
+              Want to win a voucher? Claim a Lucky Dip bag 🛍️ by 13th June to enter our prize draw
             </span>
             <a href="#" className="promo-link">here</a>
           </div>

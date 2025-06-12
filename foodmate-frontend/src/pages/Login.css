@@ -163,36 +163,6 @@
     text-decoration: underline;
 }
 
-/* FAQ Button */
-.faq-button {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-}
-
-.faq-button button {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 100px;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-
-.faq-button button:hover {
-    transform: translateY(-2px);
-}
-
-.faq-icon {
-    font-size: 1.2rem;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-content {
