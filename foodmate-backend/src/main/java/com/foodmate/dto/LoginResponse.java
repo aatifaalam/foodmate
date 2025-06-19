@@ -1,5 +1,8 @@
 package com.foodmate.dto;
 
+// This is a Data Transfer Object (DTO) and is not a JPA entity. It is used to transfer data between layers.
+// No JPA/Hibernate annotations are present here.
+
 public class LoginResponse {
 
     private String token;

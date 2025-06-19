@@ -3,6 +3,9 @@ package com.foodmate.dto;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
+// This is a Data Transfer Object (DTO) and is not a JPA entity. It is used to transfer data between layers.
+// No JPA/Hibernate annotations are present here.
+
 public class LoginRequest {
 
     @NotBlank

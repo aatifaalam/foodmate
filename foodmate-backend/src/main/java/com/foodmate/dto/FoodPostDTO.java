@@ -2,6 +2,9 @@ package com.foodmate.dto;
 
 import java.time.LocalDateTime;
 
+// This is a Data Transfer Object (DTO) and is not a JPA entity. It is used to transfer data between layers.
+// No JPA/Hibernate annotations are present here.
+
 public class FoodPostDTO {
     private String title;
     private String description;
